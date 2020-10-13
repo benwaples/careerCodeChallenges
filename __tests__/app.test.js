@@ -54,7 +54,15 @@ describe('codeChallenge tests', () => {
     
     const addOneMonth = '1M';
     const result = add(date, addOneMonth);
-    console.log(expectedDate.valueOf(), result);
+    expect(result).toEqual(expectedDate.valueOf());
+  });
+  
+  it('should take a date and a "1y" and return a new date with the 1 year', () => {
+    const date = new Date('July 20, 69 00:20:18');
+    const expectedDate = new Date('July 20, 70 00:20:18');
+    
+    const addOneYear = '1y';
+    const result = add(date, addOneYear);
     expect(result).toEqual(expectedDate.valueOf());
   });
 });

@@ -40,12 +40,21 @@ const addDate = (date, diff) => {
     return date.setDate(updateWeek);
   }
   
-  // add to days
+  // add to months
   if(operator === 'M') {
     const currentMonth = date.getMonth();
     const updateMonth = currentMonth + (Number(addNumber[0]));
 
     return date.setMonth(updateMonth);
+  }
+  
+  // add to months
+  if(operator === 'y') {
+    const currentMonth = date.getFullYear();
+    console.log(currentMonth);
+    const updateMonth = currentMonth + (Number(addNumber[0]));
+    console.log(updateMonth);
+    return date.setFullYear(updateMonth);
   }
   return date.toISOString();
 };
