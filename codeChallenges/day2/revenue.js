@@ -5,11 +5,16 @@ const revenue = (transactions) => {
   transactions.map(transaction => {
     const dateObject = new Date(transaction.timestamp);
     const mungedDate = dateObject.toDateString();
+   
+    if(revenue[mungedDate]) {
+      return revenue[mungedDate] += transaction.price; 
+    } else { 
+      return revenue[mungedDate] = transaction.price;
+    }
 
-    revenue[mungedDate] ? (revenue[mungedDate] + transaction.price) : (revenue[mungedDate] = transaction.price);
-      
+    
   });
-
+  
   return revenue;
 };
 
