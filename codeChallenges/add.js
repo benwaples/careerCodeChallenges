@@ -7,55 +7,54 @@ const addDate = (date, diff) => {
   
   // add to seconds
   if(operator === 's') {
-    const currentSecond = date.getSeconds();
-    const updatedSecond = currentSecond + Number(addNumber[0]);
-    return date.setSeconds(updatedSecond);
+    const currentTime = date.getSeconds();
+    const updatedTime = currentTime + Number(addNumber[0]);
+    return date.setSeconds(updatedTime);
   }
   // add to minutes
   if(operator === 'm') {
-    const currentSecond = date.getMinutes();
-    const updatedSecond = currentSecond + Number(addNumber[0]);
-    return date.setMinutes(updatedSecond);
+    const currentTime = date.getMinutes();
+    const updatedTime = currentTime + Number(addNumber[0]);
+    return date.setMinutes(updatedTime);
   }
   // add to hours
   if(operator === 'h') {
-    const currentSecond = date.getHours();
-    const updatedSecond = currentSecond + Number(addNumber[0]);
-    return date.setHours(updatedSecond);
+    const currentTime = date.getHours();
+    const updatedTime = currentTime + Number(addNumber[0]);
+    return date.setHours(updatedTime);
   }
   
   // add to days
   if(operator === 'd') {
-    const currentDay = date.getDate();
-    const updatedDay = currentDay + Number(addNumber[0]);
+    const currentTime = date.getDate();
+    const updatedTime = currentTime + Number(addNumber[0]);
 
-    return date.setDate(updatedDay);
+    return date.setDate(updatedTime);
   }
   
   // add to weeks
   if(operator === 'w') {
-    const currentDay = date.getDate();
-    const updateWeek = currentDay + (Number(addNumber[0] * 7));
+    const currentTime = date.getDate();
+    const updatedTime = currentTime + (Number(addNumber[0] * 7));
 
-    return date.setDate(updateWeek);
+    return date.setDate(updatedTime);
   }
   
   // add to months
   if(operator === 'M') {
-    const currentMonth = date.getMonth();
-    const updateMonth = currentMonth + (Number(addNumber[0]));
+    const currentTime = date.getMonth();
+    const updatedTime = currentTime + (Number(addNumber[0]));
 
-    return date.setMonth(updateMonth);
+    return date.setMonth(updatedTime);
   }
   
   // add to months
   if(operator === 'y') {
-    const currentMonth = date.getFullYear();
-    console.log(currentMonth);
-    const updateMonth = currentMonth + (Number(addNumber[0]));
-    console.log(updateMonth);
-    return date.setFullYear(updateMonth);
+    const currentTime = date.getFullYear();
+    const updatedTime = currentTime + (Number(addNumber[0]));
+    return date.setFullYear(updatedTime);
   }
+  
   return date.toISOString();
 };
 
