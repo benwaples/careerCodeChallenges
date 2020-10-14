@@ -1,4 +1,4 @@
-const add = require('../codeChallenges/add');
+const add = require('./add');
 
 
 describe('codeChallenge tests', () => {
